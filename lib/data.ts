@@ -102,6 +102,5 @@ export const skillsData = [
   "GraphQL",
   "Apollo",
   "Express",
-  "PostgreSQL",
   "Framer Motion",
 ] as const;
