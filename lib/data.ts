@@ -10,26 +10,37 @@ export const links = [
   {
     name: "Home",
     hash: "#home",
+    isHash: true,
   },
   {
     name: "About",
     hash: "#about",
+    isHash: true,
   },
   {
     name: "Projects",
     hash: "#projects",
+    isHash: true,
   },
   {
     name: "Skills",
     hash: "#skills",
+    isHash: true,
   },
   {
     name: "Experience",
     hash: "#experience",
+    isHash: true,
+  },
+  {
+    name: "Blog",
+    hash: "/blog",
+    isHash: false,
   },
   {
     name: "Contact",
     hash: "#contact",
+    isHash: true,
   },
 ] as const;
 
