@@ -3,19 +3,18 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-
 import { motion } from "framer-motion";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function Intro() {
-  function setActiveSection(arg0: string) {
-    throw new Error("Function not implemented.");
-  }
+  const { ref } = useSectionInView("Home", 0.5);
 
   return (
     <section
+      ref={ref}
       id="home"
       className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
     >
