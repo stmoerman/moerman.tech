@@ -66,7 +66,7 @@ export default function FAQ() {
                       )}
                     </svg>
 
-                    <h1 className="mx-4 text-xl text-gray-700 dark:text-white text-left">
+                    <h1 className="mx-4 text-xl text-black dark:text-white text-left">
                       {faq.question}
                     </h1>
                   </button>
@@ -84,7 +84,7 @@ export default function FAQ() {
                       exit={{ opacity: 0 }}
                     >
                       <p
-                        className="px-6 text-gray-500 dark:text-gray-300"
+                        className="px-6 dark:text-gray-300"
                         dangerouslySetInnerHTML={{ __html: faq.answer }}
                       />
                     </motion.div>
