@@ -1,7 +1,12 @@
 import React from "react";
 import Image from "next/image";
 
-export default function Maintenance() {
+type MaintenanceProps = {
+  title: string;
+  description: string;
+};
+
+export default function Maintenance({ title, description }: MaintenanceProps) {
   return (
     <section>
       <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-xl">
@@ -18,20 +23,10 @@ export default function Maintenance() {
               />
             </svg>
             <h1 className="mb-4 text-4xl font-medium tracking-tight leading-none text-gray-900 dark:text-white">
-              Down for Maintenance
+              {title}
             </h1>
             <p className="mx-auto max-w-xl font-light text-gray-500 lg:mx-0 xl:mb-8 md:text-lg xl:text-xl dark:text-gray-400">
-              I am currently updating my blog pages. Please check back again by
-              September 11th. In the meantime, you can check out some of my
-              contributions over at{" "}
-              <a
-                href="https://www.bakklog.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Bakklog.com
-              </a>
-              .
+              {description}
             </p>
           </div>
           <div className="hidden col-span-6 lg:flex">
