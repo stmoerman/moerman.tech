@@ -22,7 +22,7 @@ export default function BlogHeader({ data }: BlogHeaderProps) {
       <div className="space-y-1">
         <div className="space-y-10">
           <div>
-            <p className="text-base font-medium leading-6 text-gray-100 dark:text-blue-300">
+            <p className="text-base font-medium leading-6 text-blue-600 dark:text-blue-300">
               {new Date(data._createdAt).toISOString().split("T")[0]}
             </p>
           </div>

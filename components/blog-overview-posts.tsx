@@ -40,7 +40,7 @@ export default function BlogOverviewPosts({ data }: BlogOverViewPostsProps) {
         >
           <article className="space-y-2 xl:grid xl:grid-cols-4 xl:item-baseline xl:space-y-0">
             <div>
-              <p className="text-base font-medium leading-6 text-gray-100 dark:text-blue-300">
+              <p className="text-base font-medium leading-6 text-blue-600 dark:text-blue-300">
                 {new Date(post._createdAt).toISOString().split("T")[0]}
               </p>
             </div>
@@ -54,7 +54,7 @@ export default function BlogOverviewPosts({ data }: BlogOverViewPostsProps) {
                   {post.title}
                 </h3>
               </div>
-              <p className="prose max-w-none text-gray-500 dark:text-gray-300 line-clamp-3">
+              <p className="prose max-w-none  dark:text-gray-300 line-clamp-3">
                 {post.overview}
               </p>
             </Link>
