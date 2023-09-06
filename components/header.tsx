@@ -9,7 +9,7 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { links } from "@/lib/data";
 
-export default function HeaderNew() {
+export default function Header() {
   const pathname = usePathname();
 
   const [isOpen, setIsOpen] = useState(false);
@@ -24,77 +24,77 @@ export default function HeaderNew() {
 
   return (
     <>
-      <div
-        id="menu"
-        className={`fixed z-[1000] flex justify-center items-center bg-gray-900 transition duration-700 ${
-          isOpen ? "w-screen h-screen opacity-95" : "w-0 h-0 opacity-0"
-        }`}
-      >
-        <button
-          aria-label="Close mobile menu"
-          type="button"
-          className="fixed top-7 right-7 text-white text-7xl font-semibold duration-300"
-          onClick={closeMenu}
+      {isOpen && (
+        <div
+          id="menu"
+          className="fixed z-[1000] flex justify-center items-center bg-gray-900 w-screen h-screen opacity-95 transition duration-700"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="w-6 h-6"
+          <button
+            aria-label="Close mobile menu"
+            type="button"
+            className="fixed top-7 right-7 text-white text-7xl font-semibold duration-300"
+            onClick={closeMenu}
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-        </button>
-        <div className="flex flex-col text-white text-center text-xl font-light space-y-3">
-          <div onClick={closeMenu}>
-            <Link
-              className={cn(
-                "hover:text-amber-500 duration-300",
-                pathname === "/" && "text-blue-500 font-semibold"
-              )}
-              href="/"
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="w-6 h-6"
             >
-              Home
-            </Link>
-          </div>
-          <div onClick={closeMenu}>
-            <Link
-              className={cn(
-                "hover:text-amber-500 duration-300",
-                pathname === "/projects" && "text-blue-500 font-semibold"
-              )}
-              href="/projects"
-            >
-              Projects
-            </Link>
-          </div>
-          <div onClick={closeMenu}>
-            <Link
-              className={cn(
-                "hover:text-amber-500 duration-300",
-                pathname === "/blog" && "text-blue-500 font-semibold"
-              )}
-              href="/blog"
-            >
-              Blog
-            </Link>
-          </div>
-          <div onClick={closeMenu}>
-            <Link
-              className="hover:text-amber-500 duration-300"
-              href="/#contact"
-            >
-              Contact
-            </Link>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+          <div className="flex flex-col text-white text-center text-xl font-light space-y-3">
+            <div onClick={closeMenu}>
+              <Link
+                className={cn(
+                  "hover:text-amber-500 duration-300",
+                  pathname === "/" && "text-blue-500 font-semibold"
+                )}
+                href="/"
+              >
+                Home
+              </Link>
+            </div>
+            <div onClick={closeMenu}>
+              <Link
+                className={cn(
+                  "hover:text-amber-500 duration-300",
+                  pathname === "/projects" && "text-blue-500 font-semibold"
+                )}
+                href="/projects"
+              >
+                Projects
+              </Link>
+            </div>
+            <div onClick={closeMenu}>
+              <Link
+                className={cn(
+                  "hover:text-amber-500 duration-300",
+                  pathname === "/blog" && "text-blue-500 font-semibold"
+                )}
+                href="/blog"
+              >
+                Blog
+              </Link>
+            </div>
+            <div onClick={closeMenu}>
+              <Link
+                className="hover:text-amber-500 duration-300"
+                href="/#contact"
+              >
+                Contact
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
+      )}
       <motion.nav
         className="sm:px-2 lg:px-8"
         initial={{ opacity: 0, y: 100 }}
@@ -141,11 +141,9 @@ export default function HeaderNew() {
             <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:border-gray-700">
               {links.map((link) =>
                 link.button ? (
-                  <motion.li
+                  <li
                     className="h-3/4 flex items-center justify-center relative"
                     key={link.hash}
-                    initial={{ y: -100, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
                   >
                     <Link
                       className="flex w-full items-center justify-center px-3 py-3 dark:text-white bg-gray-900 text-white rounded-full focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition-all"
@@ -153,13 +151,11 @@ export default function HeaderNew() {
                     >
                       {link.name}
                     </Link>
-                  </motion.li>
+                  </li>
                 ) : (
-                  <motion.li
+                  <li
                     className="h-3/4 items-center justify-center relative hidden md:flex"
                     key={link.hash}
-                    initial={{ y: -100, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
                   >
                     <Link
                       className={cn(
@@ -171,7 +167,7 @@ export default function HeaderNew() {
                     >
                       {link.name}
                     </Link>
-                  </motion.li>
+                  </li>
                 )
               )}
             </ul>
