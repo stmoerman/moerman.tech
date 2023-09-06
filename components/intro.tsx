@@ -24,9 +24,9 @@ export default function Intro() {
             <Image
               src="/stephan-moerman.png"
               alt="Stephan Moerman portrait"
-              width="192"
-              height="192"
-              quality="95"
+              width={96}
+              height={96}
+              quality={90}
               priority={true}
               className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
             />
