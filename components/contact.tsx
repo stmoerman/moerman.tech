@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import toast from "react-hot-toast";
 
 import { sendEmail } from "@/actions/send-email";
@@ -11,14 +10,9 @@ import SubmitBtn from "@/components/submit-btn";
 
 export default function Contact() {
   return (
-    <motion.section
+    <section
       id="contact"
       className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{
-        duration: 1,
-      }}
     >
       <SectionHeading>Contact me</SectionHeading>
       <p className="text-gray-700 -mt-6 dark:text-white/80">
@@ -70,6 +64,6 @@ export default function Contact() {
         />
         <SubmitBtn />
       </form>
-    </motion.section>
+    </section>
   );
 }

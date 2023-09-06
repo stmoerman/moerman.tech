@@ -1,7 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 import { PortableText } from "@portabletext/react";
 
 import Refractor from "react-refractor";
@@ -58,13 +54,8 @@ export default function BlogContent({ data }: BlogContentProps) {
   };
 
   return (
-    <motion.div
-      className="prose max-w-none pb-8 pt-10 dark:prose-invert prose-lg"
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.175 }}
-    >
+    <div className="prose max-w-none pb-8 pt-10 dark:prose-invert prose-lg">
       <PortableText value={data.content} components={PortableTextComponent} />
-    </motion.div>
+    </div>
   );
 }
