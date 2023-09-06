@@ -31,6 +31,7 @@ export default function HeaderNew() {
         }`}
       >
         <button
+          aria-label="Close mobile menu"
           type="button"
           className="fixed top-7 right-7 text-white text-7xl font-semibold duration-300"
           onClick={closeMenu}
