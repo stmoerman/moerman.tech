@@ -31,9 +31,9 @@ export default function Footer() {
               className="h-20 w-20 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
               src="/stephan-moerman.png"
               alt="Stephan Moerman portrait"
-              width="192"
-              height="192"
-              quality="95"
+              width={96}
+              height={96}
+              quality={90}
             />
             <div>
               <p className="leading-6 text-gray-600 dark:text-gray-200">
