@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint"
   },
@@ -22,6 +23,7 @@
     "framer-motion": "^10.12.17",
     "next": "13.4.19",
     "next-sanity": "^5.4.6",
+    "next-sitemap": "^4.2.3",
     "next-themes": "^0.2.1",
     "postcss": "8.4.29",
     "react": "18.2.0",
