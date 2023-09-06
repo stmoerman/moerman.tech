@@ -14,7 +14,7 @@ export default function Custom404() {
   return (
     <section>
       <div className="container min-h-screen px-6 py-12 mx-auto lg:flex lg:items-center lg:gap-12">
-        <div className="wf-ull lg:w-1/2">
+        <div className="w-full lg:w-1/2">
           <p className="text-sm font-medium text-blue-500 dark:text-blue-400">
             404 error
           </p>
