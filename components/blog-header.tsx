@@ -3,22 +3,13 @@
 import { Post } from "@/lib/interface";
 import React from "react";
 
-import { motion } from "framer-motion";
-
 interface BlogHeaderProps {
   data: Post;
 }
 
 export default function BlogHeader({ data }: BlogHeaderProps) {
   return (
-    <motion.header
-      className="pt-6 xl:pb-6"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{
-        delay: 0.1,
-      }}
-    >
+    <header className="pt-6 xl:pb-6">
       <div className="space-y-1">
         <div className="space-y-10">
           <div>
@@ -33,6 +24,6 @@ export default function BlogHeader({ data }: BlogHeaderProps) {
           </h1>
         </div>
       </div>
-    </motion.header>
+    </header>
   );
 }

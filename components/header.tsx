@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -95,12 +94,7 @@ export default function Header() {
           </div>
         </div>
       )}
-      <motion.nav
-        className="sm:px-2 lg:px-8"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.175 }}
-      >
+      <nav className="sm:px-2 lg:px-8">
         <div className="flex flex-wrap items-center justify-between p-4">
           <Link href="/">
             <p className="text-lg sm:text-xl font-medium capitalize">
@@ -173,7 +167,7 @@ export default function Header() {
             </ul>
           </div>
         </div>
-      </motion.nav>
+      </nav>
     </>
   );
 }

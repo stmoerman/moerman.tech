@@ -2,15 +2,11 @@
 
 import React from "react";
 import SectionHeading from "@/components/section-heading";
-import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <motion.section
+    <section
       className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.175 }}
       id="about"
     >
       <SectionHeading>About me</SectionHeading>
@@ -55,6 +51,6 @@ export default function About() {
         <span className="font-medium">electrical engineering and IoT</span>. My
         favorite passtime for the weekends is to watch Formula 1 races.
       </p>
-    </motion.section>
+    </section>
   );
 }
